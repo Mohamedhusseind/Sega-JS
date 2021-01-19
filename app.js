@@ -46,7 +46,7 @@ const boxClicked = (e)=> {
 }
 const playerWon = ()=>{
     if (spaces[0] == currentPlayer){
-        if(spaces[1]==currentPlayer && spaces[2]==currentPlayer){
+        if(spaces[1]=='O' && spaces[2]=='O'){
             return true;
         }
         if(spaces[3]==currentPlayer && spaces[6]==currentPlayer){
@@ -60,7 +60,7 @@ const playerWon = ()=>{
         if(spaces[2]==currentPlayer && spaces[5]==currentPlayer){
             return true;
         }
-        if(spaces[7]==currentPlayer && spaces[6]==currentPlayer){
+        if(spaces[7]=='X' && spaces[6]=='X'){
             return true;
         }
     }
@@ -72,6 +72,11 @@ const playerWon = ()=>{
     }
     if (spaces[2] == currentPlayer){
         if(spaces[4]==currentPlayer && spaces[6]==currentPlayer){
+            return true;
+        }
+    }
+    if (spaces[1] == currentPlayer){
+        if(spaces[4]==currentPlayer && spaces[7]==currentPlayer){
             return true;
         }
     }
